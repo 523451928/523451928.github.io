@@ -98,8 +98,8 @@
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Object.defineProperty">
-<meta property="og:url" content="https://ptylll.github.io/2018/06/14/Object-defineProperty/index.html">
-<meta property="og:site_name" content="PTY">
+<meta property="og:url" content="https://czmlll.github.io/2018/06/14/Object-defineProperty/index.html">
+<meta property="og:site_name" content="czm">
 <meta property="og:description" content="js 对象是由一个或者多个键值对组合而成的集合，每个属性对应任意类型的值。声明一个对象方式 123let obj = &amp;#123;&amp;#125;//或者let obj = new Object() 在对象上添加属性： 1234567let obj =&amp;#123;&amp;#125;    obj.name=&apos;李四&apos;;    obj.age = 18;    obj.msg = function()&amp;#123">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-06-20T07:57:14.684Z">
@@ -128,20 +128,20 @@
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      labels: {"input_placeholder":"Search for Posts","hits_emczm":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-  <link rel="canonical" href="https://ptylll.github.io/2018/06/14/Object-defineProperty/">
+  <link rel="canonical" href="https://czmlll.github.io/2018/06/14/Object-defineProperty/">
 
 
 
 
 
-  <title>Object.defineProperty | PTY</title>
+  <title>Object.defineProperty | czm</title>
   
 
 
@@ -171,7 +171,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">PTY</span>
+        <span class="site-title">czm</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -258,16 +258,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ptylll.github.io/2018/06/14/Object-defineProperty/">
+    <link itemprop="mainEntityOfPage" href="https://czmlll.github.io/2018/06/14/Object-defineProperty/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="PTY">
+      <meta itemprop="name" content="czm">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PTY">
+      <meta itemprop="name" content="czm">
     </span>
 
     
@@ -418,7 +418,7 @@
 <p>示例：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;</span><br><span class="line">obj.name = <span class="string">'李四'</span>;</span><br><span class="line">obj.age = <span class="number">18</span>;</span><br><span class="line">obj.msg = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.name + <span class="keyword">this</span>.age</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj.msg())</span><br><span class="line">obj.name = <span class="string">'张三'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj.msg())</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">'sex'</span>, &#123; <span class="comment">//添加属性</span></span><br><span class="line">  value: <span class="string">'男'</span>,</span><br><span class="line">  configurable: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(obj)</span><br><span class="line"></span><br><span class="line">obj.sex = <span class="string">'女'</span>; <span class="comment">//直接修改属性 无效</span></span><br><span class="line"><span class="built_in">console</span>.log(obj)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">'sex'</span>, &#123; <span class="comment">//</span></span><br><span class="line">  value: <span class="string">'男'</span>,</span><br><span class="line">  configurable: <span class="literal">true</span>,</span><br><span class="line">  writable: <span class="literal">true</span>,</span><br><span class="line">  enumerable: <span class="literal">false</span></span><br><span class="line">&#125;)</span><br><span class="line">obj.sex = <span class="string">'女'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj) <span class="comment">//&#123;name: "张三", age: 18, msg: ƒ, sex: "女"&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">'sex'</span>, &#123; <span class="comment">//</span></span><br><span class="line">  value: <span class="string">'男'</span>,</span><br><span class="line">  configurable: <span class="literal">true</span>,</span><br><span class="line">  writable: <span class="literal">true</span>,</span><br><span class="line">  enumerable: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item) <span class="comment">// name age msg sex</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// configurable</span></span><br><span class="line"><span class="keyword">delete</span> obj.sex</span><br><span class="line"><span class="built_in">console</span>.log(obj)</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">'sex'</span>,&#123; <span class="comment">// 不可删</span></span><br><span class="line">  	value:<span class="string">'男'</span>,</span><br><span class="line">    configurable:<span class="literal">false</span>,</span><br><span class="line">    writable:<span class="literal">true</span>,</span><br><span class="line">    enumerable:<span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(obj) <span class="comment">// name age msg sex</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> thisGrade = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">'grade'</span>,&#123;</span><br><span class="line">	get:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  	<span class="keyword">return</span> thisGrade</span><br><span class="line">  &#125;,</span><br><span class="line">  set:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">   thisGrade	= value</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(obj.grade)<span class="comment">//3</span></span><br><span class="line">obj.grade = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj.grade)<span class="comment">//10</span></span><br></pre></td></tr></table></figure>
 <p>在线代码:</p>
-<script async src="//jsfiddle.net/ptylll/nyqkrzvm/embed/js,html/"></script>
+<script async src="//jsfiddle.net/czmlll/nyqkrzvm/embed/js,html/"></script>
 
 <p>总结：<br>Object.defineProperty()的用法远远不止这些，vue.js是通过它实现双向绑定的，俗称属性拦截器。</p>
 <p>参考链接：<br><a href="https://segmentfault.com/a/1190000007434923" target="_blank" rel="noopener">https://segmentfault.com/a/1190000007434923</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty</a></p>
@@ -533,7 +533,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">PTY</p>
+              <p class="site-author-name" itemprop="name">czm</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -623,7 +623,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">PTY</span>
+  <span class="author" itemprop="copyrightHolder">czm</span>
 
   
     <span class="post-meta-divider">|</span>

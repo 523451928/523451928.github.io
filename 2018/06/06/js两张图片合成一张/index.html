@@ -97,8 +97,8 @@
 <meta name="description" content="js利用canvas元素合成图片主要使用到canvas上的drawImage()方法。drawImage() 方法在画布上绘制图像、画布或视频。drawImage() 方法也能够绘制图像的某些部分，以及/或者增加或减少图像的尺寸。 drawImage()用法1.在画布上定位图像： 1drawImage(img,x,y) 2.在画布上定位图像设置宽高： 1drawImage(img,x,y,with">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js两张图片合成一张">
-<meta property="og:url" content="https://ptylll.github.io/2018/06/06/js两张图片合成一张/index.html">
-<meta property="og:site_name" content="PTY">
+<meta property="og:url" content="https://czmlll.github.io/2018/06/06/js两张图片合成一张/index.html">
+<meta property="og:site_name" content="czm">
 <meta property="og:description" content="js利用canvas元素合成图片主要使用到canvas上的drawImage()方法。drawImage() 方法在画布上绘制图像、画布或视频。drawImage() 方法也能够绘制图像的某些部分，以及/或者增加或减少图像的尺寸。 drawImage()用法1.在画布上定位图像： 1drawImage(img,x,y) 2.在画布上定位图像设置宽高： 1drawImage(img,x,y,with">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-06-20T07:56:06.506Z">
@@ -127,20 +127,20 @@
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      labels: {"input_placeholder":"Search for Posts","hits_emczm":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-  <link rel="canonical" href="https://ptylll.github.io/2018/06/06/js两张图片合成一张/">
+  <link rel="canonical" href="https://czmlll.github.io/2018/06/06/js两张图片合成一张/">
 
 
 
 
 
-  <title>js两张图片合成一张 | PTY</title>
+  <title>js两张图片合成一张 | czm</title>
   
 
 
@@ -170,7 +170,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">PTY</span>
+        <span class="site-title">czm</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -257,16 +257,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ptylll.github.io/2018/06/06/js两张图片合成一张/">
+    <link itemprop="mainEntityOfPage" href="https://czmlll.github.io/2018/06/06/js两张图片合成一张/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="PTY">
+      <meta itemprop="name" content="czm">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PTY">
+      <meta itemprop="name" content="czm">
     </span>
 
     
@@ -455,7 +455,7 @@
 </table>
 <h3 id="图片合成代码"><a href="#图片合成代码" class="headerlink" title="图片合成代码"></a>图片合成代码</h3><p>主要js代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myCanvas = <span class="built_in">document</span>.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line">  <span class="keyword">var</span> c = myCanvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> img = <span class="built_in">document</span>.getElementById(<span class="string">'img'</span>);</span><br><span class="line">  img.crossOrigin = <span class="string">'Anonymous'</span>;</span><br><span class="line">  c.drawImage(img, <span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">200</span>);</span><br><span class="line">  c.font = <span class="string">'60px Courier New'</span>;</span><br><span class="line">  c.fillText(<span class="string">'成功了'</span>, <span class="number">0</span>, <span class="number">260</span>);</span><br><span class="line">  <span class="keyword">var</span> img02 = <span class="keyword">new</span> Image();</span><br><span class="line">  img02.src = <span class="string">'http://ot2pck40x.bkt.clouddn.com/timg.jpg'</span>;</span><br><span class="line">  img02.crossOrigin = <span class="string">'Anonymous'</span>;</span><br><span class="line">  img02.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    c.drawImage(img02, <span class="number">200</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">200</span>)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
 <p>在线运行</p>
-<script async src="//jsfiddle.net/ptylll/xc0t7j15/embed/"></script>
+<script async src="//jsfiddle.net/czmlll/xc0t7j15/embed/"></script>
 
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>基本实现两张或多张图片合成但是后续合成图片路径还未做处理。等待下次总结完善</p>
 <p>参考链接：<a href="http://www.w3school.com.cn/html5/canvas_drawimage.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/html5/canvas_drawimage.asp</a></p>
@@ -564,7 +564,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">PTY</p>
+              <p class="site-author-name" itemprop="name">czm</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -654,7 +654,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">PTY</span>
+  <span class="author" itemprop="copyrightHolder">czm</span>
 
   
     <span class="post-meta-divider">|</span>

@@ -44,10 +44,10 @@ $(document).ready(function () {
             '</a>'
           );
         },
-        empty: function (data) {
+        emczm: function (data) {
           return (
-            '<div id="algolia-hits-empty">' +
-              algoliaSettings.labels.hits_empty.replace(/\$\{query}/, data.query) +
+            '<div id="algolia-hits-emczm">' +
+              algoliaSettings.labels.hits_emczm.replace(/\$\{query}/, data.query) +
             '</div>'
           );
         }

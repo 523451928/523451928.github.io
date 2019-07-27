@@ -98,8 +98,8 @@
 <meta name="keywords" content="sass">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sass基本用法第二篇">
-<meta property="og:url" content="https://ptylll.github.io/2018/05/04/sass基本用法第二篇/index.html">
-<meta property="og:site_name" content="PTY">
+<meta property="og:url" content="https://czmlll.github.io/2018/05/04/sass基本用法第二篇/index.html">
+<meta property="og:site_name" content="czm">
 <meta property="og:description" content="上篇介绍sass的变量 嵌套规则 嵌套属性本篇介绍sass 使用SASS部分文件  静默注释 混合器">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-06-20T07:57:33.070Z">
@@ -128,20 +128,20 @@
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      labels: {"input_placeholder":"Search for Posts","hits_emczm":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-  <link rel="canonical" href="https://ptylll.github.io/2018/05/04/sass基本用法第二篇/">
+  <link rel="canonical" href="https://czmlll.github.io/2018/05/04/sass基本用法第二篇/">
 
 
 
 
 
-  <title>sass基本用法第二篇 | PTY</title>
+  <title>sass基本用法第二篇 | czm</title>
   
 
 
@@ -171,7 +171,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">PTY</span>
+        <span class="site-title">czm</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -258,16 +258,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ptylll.github.io/2018/05/04/sass基本用法第二篇/">
+    <link itemprop="mainEntityOfPage" href="https://czmlll.github.io/2018/05/04/sass基本用法第二篇/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="PTY">
+      <meta itemprop="name" content="czm">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PTY">
+      <meta itemprop="name" content="czm">
     </span>
 
     
@@ -403,7 +403,7 @@
 <h5 id="sass-导入文件"><a href="#sass-导入文件" class="headerlink" title="sass 导入文件"></a>sass 导入文件</h5><p>在css中我们引入其他的css文件会用 @import ,这样做有一个缺点，只有当执行到@import的时候，浏览器才会去执行下载别的css文件,导致页面加载速度很慢。<br>sass 也有 @import 规则，但是不同的是，sass在css生成文件时候就把相关文件导入进来，这样得目的是吧多个css样式归纳到同一个css 文件中,不用去额外的去请求下载。<br>使用sass的@import规则并不需要指明被导入文件的全名。你可以省略.sass或.scss文件后缀（见下图）。这样，在不修改样式表的前提下，你完全可以随意修改你或别人写的被导入的sass样式文件语法，在sass和scss语法之间随意切换。举例来说，@import”sidebar”;这条命令将把sidebar.scss文件中所有样式添加到当前样式表中。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;colors&quot;;</span><br><span class="line">@import &quot;grid&quot;;</span><br><span class="line">@import &quot;mixin&quot;;</span><br><span class="line">//上面相当于 sass引入了三个文件</span><br><span class="line"></span><br><span class="line">colors.sass</span><br><span class="line">grid.sass</span><br><span class="line">mixin.sass</span><br></pre></td></tr></table></figure>
 <h6 id="sass-默认变量值-（-default）"><a href="#sass-默认变量值-（-default）" class="headerlink" title="sass 默认变量值 （!default）"></a>sass 默认变量值 （!default）</h6><p>一般情况下，你反复声明一个变量，只有最后一处声明有效且它会覆盖前边的值。<br>如果分配给变量的值后面添加了!default标志 ，这意味着该变量如果已经赋值，那么它不会被重新赋值，但是，如果它尚未赋值，那么它会被赋予新的给定值。<br>示例:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$blue: #0084ff;</span><br><span class="line">$blue-darker: darken($blue, 5);</span><br><span class="line">$color: #f00;</span><br><span class="line">$color: #ccc !default;</span><br><span class="line">body &#123;</span><br><span class="line">  background: #20262E;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  font-family: Helvetica;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#box&#123;</span><br><span class="line">  background: #fff;</span><br><span class="line">  border-radius: 4px;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  font-size: 25px;</span><br><span class="line">  text-align: center;</span><br><span class="line">  transition: all 0.2s;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  width: 300px;</span><br><span class="line">  color:$color; </span><br><span class="line"> &#125;</span><br><span class="line"> 上面的代码表示</span><br><span class="line"> 如果$color未定义的话 color默认颜色#ccc;如果另外设定了$color样式,默认的$color:#ccc会被覆盖掉</span><br></pre></td></tr></table></figure></p>
-<script async src="//jsfiddle.net/ptylll/hnwL1xhx/embed/html,css,result/"></script>
+<script async src="//jsfiddle.net/czmlll/hnwL1xhx/embed/html,css,result/"></script>
 
 <h6 id="sass嵌套导入"><a href="#sass嵌套导入" class="headerlink" title="sass嵌套导入"></a>sass嵌套导入</h6><p>由于sass有@import 规则。这种导入方式下，生成对应的css文件时，局部文件会被直接插入到css规则内导入它的地方。</p>
 <p>示例 theme-bule.sass内容如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">aside&#123;</span><br><span class="line">    color:#ccc;</span><br><span class="line">    background-color:#f00;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -528,7 +528,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">PTY</p>
+              <p class="site-author-name" itemprop="name">czm</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -618,7 +618,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">PTY</span>
+  <span class="author" itemprop="copyrightHolder">czm</span>
 
   
     <span class="post-meta-divider">|</span>

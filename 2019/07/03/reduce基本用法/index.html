@@ -98,8 +98,8 @@
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="reduce基本用法">
-<meta property="og:url" content="https://ptylll.github.io/2019/07/03/reduce基本用法/index.html">
-<meta property="og:site_name" content="PTY">
+<meta property="og:url" content="https://czmlll.github.io/2019/07/03/reduce基本用法/index.html">
+<meta property="og:site_name" content="czm">
 <meta property="og:description" content="reduce() 方法对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。 语法1arr.reduce(function(total,currentValue,currentIndex,arr)[ initialValue]) reduce函数接收4个参数：  total (acc) (累计器) currentValue Value (cur) (当前值)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-03T03:08:05.737Z">
@@ -128,20 +128,20 @@
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      labels: {"input_placeholder":"Search for Posts","hits_emczm":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-  <link rel="canonical" href="https://ptylll.github.io/2019/07/03/reduce基本用法/">
+  <link rel="canonical" href="https://czmlll.github.io/2019/07/03/reduce基本用法/">
 
 
 
 
 
-  <title>reduce基本用法 | PTY</title>
+  <title>reduce基本用法 | czm</title>
   
 
 
@@ -171,7 +171,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">PTY</span>
+        <span class="site-title">czm</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -258,16 +258,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ptylll.github.io/2019/07/03/reduce基本用法/">
+    <link itemprop="mainEntityOfPage" href="https://czmlll.github.io/2019/07/03/reduce基本用法/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="PTY">
+      <meta itemprop="name" content="czm">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PTY">
+      <meta itemprop="name" content="czm">
     </span>
 
     
@@ -416,7 +416,7 @@
 <h5 id="求字符串中字母出现的次数"><a href="#求字符串中字母出现的次数" class="headerlink" title="求字符串中字母出现的次数"></a>求字符串中字母出现的次数</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'qwertyyuiqweavdgwerwr'</span></span><br><span class="line"><span class="keyword">let</span> strObj = str.split(<span class="string">''</span>).reduce(<span class="function">(<span class="params">pre,curr</span>)=&gt;</span>&#123;</span><br><span class="line">    pre[curr] ? pre[curr]++ : pre[curr] = <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> pre</span><br><span class="line">&#125;,&#123;&#125;)<span class="comment">// &#123;a: 1, d: 1, e: 3, g: 1, i: 1, q: 2, r: 3, t: 1, u: 1, v: 1, w: 4, y: 2&#125;</span></span><br></pre></td></tr></table></figure>
 <h5 id="数组除重"><a href="#数组除重" class="headerlink" title="数组除重"></a>数组除重</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">45</span>,<span class="number">4</span>,,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">let</span> removerRepetitionItem = array.reduce(<span class="function">(<span class="params">pre,curr</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pre.indexOf(curr) &lt; <span class="number">0</span>) pre.push(curr)</span><br><span class="line">    <span class="keyword">return</span> pre</span><br><span class="line">&#125;,[])<span class="comment">//[1, 2, 3, 4, 5, 6, 7, 8, 9, 45]</span></span><br></pre></td></tr></table></figure>
 <h5 id="多维数组拍平"><a href="#多维数组拍平" class="headerlink" title="多维数组拍平"></a>多维数组拍平</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> multiArray =[[<span class="number">12</span>,<span class="number">3</span>,<span class="number">45</span>],[<span class="number">4</span>,<span class="number">56</span>,<span class="number">7</span>],[<span class="number">9</span>,<span class="number">9</span>,<span class="number">9</span>]]</span><br><span class="line"><span class="keyword">let</span> arrayList = multiArray.reduce(<span class="function">(<span class="params">pre,curr</span>)=&gt;</span>pre.concat(curr),[])<span class="comment">//[12, 3, 45, 4, 56, 7, 9, 9, 9]</span></span><br></pre></td></tr></table></figure>
-<p>代码在线地址：<br><a href="https://runkit.com/pty/5d1c14f54eb6d40014e27c7a" target="_blank" rel="noopener">https://runkit.com/pty/5d1c14f54eb6d40014e27c7a</a><br>参考链接：<br><a href="https://juejin.im/post/5b4d35406fb9a04fd55ac064" target="_blank" rel="noopener">https://juejin.im/post/5b4d35406fb9a04fd55ac064</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce</a></p>
+<p>代码在线地址：<br><a href="https://runkit.com/czm/5d1c14f54eb6d40014e27c7a" target="_blank" rel="noopener">https://runkit.com/czm/5d1c14f54eb6d40014e27c7a</a><br>参考链接：<br><a href="https://juejin.im/post/5b4d35406fb9a04fd55ac064" target="_blank" rel="noopener">https://juejin.im/post/5b4d35406fb9a04fd55ac064</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce</a></p>
 
       
     </div>
@@ -524,7 +524,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">PTY</p>
+              <p class="site-author-name" itemprop="name">czm</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -614,7 +614,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">PTY</span>
+  <span class="author" itemprop="copyrightHolder">czm</span>
 
   
     <span class="post-meta-divider">|</span>

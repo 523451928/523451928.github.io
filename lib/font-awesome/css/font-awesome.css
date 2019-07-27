@@ -989,7 +989,7 @@
 .fa-reply-all:before {
   content: "\f122";
 }
-.fa-star-half-empty:before,
+.fa-star-half-emczm:before,
 .fa-star-half-full:before,
 .fa-star-half-o:before {
   content: "\f123";
@@ -1849,7 +1849,7 @@
   content: "\f243";
 }
 .fa-battery-0:before,
-.fa-battery-empty:before {
+.fa-battery-emczm:before {
   content: "\f244";
 }
 .fa-mouse-pointer:before {
@@ -2252,7 +2252,7 @@
   content: "\f2ca";
 }
 .fa-thermometer-0:before,
-.fa-thermometer-empty:before {
+.fa-thermometer-emczm:before {
   content: "\f2cb";
 }
 .fa-shower:before {
